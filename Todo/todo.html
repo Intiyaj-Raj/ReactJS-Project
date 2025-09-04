@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application 📝</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .todo-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-section {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-section input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .input-section button {
+            padding: 8px 12px;
+            border: none;
+            background: dodgerblue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        ul li.completed span {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .actions button {
+            margin-left: 5px;
+            border: none;
+            cursor: pointer;
+            padding: 5px 8px;
+            border-radius: 5px;
+        }
+
+        .delete-btn {
+            background: red;
+            color: white;
+        }
+
+        .done-btn {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1>Todo Application 📝</h1>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a task..." />
+            <button onclick="addTask()">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        const taskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText === "") return;
+
+            // create li
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+            span.textContent = taskText;
+            li.appendChild(span);
+
+            // actions div
+            const actions = document.createElement("div");
+            actions.className = "actions";
+
+            // done button
+            const doneBtn = document.createElement("button");
+            doneBtn.textContent = "✅";
+            doneBtn.className = "done-btn";
+            doneBtn.onclick = () => {
+                li.classList.toggle("completed");
+            };
+
+            // delete button
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "🗑";
+            deleteBtn.className = "delete-btn";
+            deleteBtn.onclick = () => {
+                taskList.removeChild(li);
+            };
+
+            actions.appendChild(doneBtn);
+            actions.appendChild(deleteBtn);
+            li.appendChild(actions);
+
+            taskList.appendChild(li);
+
+            // clear input
+            taskInput.value = "";
+        }
+    </script>
+</body>
+
+</html>
