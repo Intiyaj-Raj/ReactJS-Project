@@ -68,3 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Developer
 
 Developed with ❤️ by **Intiyaj Raj**
+
+# Screenshot 
+<img width="1893" height="884" alt="Image" src="https://github.com/user-attachments/assets/a05fa905-f3f9-44c8-8e7a-79ca3ade10a9" />
+<img width="1887" height="887" alt="Image" src="https://github.com/user-attachments/assets/1afce02a-fc6f-4411-bc81-c50a46fff07d" />
