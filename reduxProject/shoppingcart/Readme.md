@@ -175,3 +175,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ using React & Redux Toolkit**
 
 For questions or support, please open an issue in the repository.
+
+# Screenshot
+<img width="1891" height="881" alt="Image" src="https://github.com/user-attachments/assets/81d24d68-d241-4814-bc1f-2a0a50971a11" />
+<img width="1896" height="890" alt="Image" src="https://github.com/user-attachments/assets/6bba739f-cfa6-4095-9087-300828774141" />
+<img width="1898" height="813" alt="Image" src="https://github.com/user-attachments/assets/334f2bf7-49a5-4ec8-b782-4f61a871553d" />
+<img width="1843" height="891" alt="Image" src="https://github.com/user-attachments/assets/7b95d3dc-f11c-4365-9fc7-17027c6ffb38" />
+
